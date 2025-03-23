@@ -15,9 +15,11 @@ public class UpdateService {
 
     private final RequestToBackendService request;
 
-    private final KeyBoardService keyBoardService;
+    private final TgCallbackService callbackService;
 
-    private final TelegramBot telegramBot;
+    private final MessageService messageService;
+
+
     public void updateOption(Update update){
         //todo Состояния чата
         if (update.hasMessage() && update.getMessage().hasText()) {
@@ -32,7 +34,7 @@ public class UpdateService {
                     //todo Получение юзера добавление его на бэк или же проверка на существование
                     break;
                 case "/pay":
-
+                    messageService.PaymentOptions(update);
                     break;
 
                 default:
@@ -40,7 +42,7 @@ public class UpdateService {
 
             }
         } else if (update.hasCallbackQuery()){
-            //TODO Каллбеки на кнопки
+            callbackService.callbackOptions(update);
         } else {
             //TODO Ошибка
         }
@@ -59,7 +61,7 @@ public class UpdateService {
 
     }
 
-    private String getUrl(Update update, Double value){
+    public String getUrl(Update update, Double value){
        PaymentDTO payDTO = PaymentDTO.builder()
                .telegramUserId(userGetId(update))
                .email("мимопока")
