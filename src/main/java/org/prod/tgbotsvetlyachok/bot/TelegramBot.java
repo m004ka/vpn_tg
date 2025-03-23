@@ -3,6 +3,7 @@ package org.prod.tgbotsvetlyachok.bot;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.prod.tgbotsvetlyachok.config.BotConfig;
+import org.prod.tgbotsvetlyachok.service.UpdateService;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -18,9 +19,10 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 public class TelegramBot extends TelegramLongPollingBot {
 
     private final BotConfig botConfig;
+    private final UpdateService updateService;
     @Override
     public void onUpdateReceived(Update update) {
-
+        updateService.updateOption(update);
     }
 
     @Override
