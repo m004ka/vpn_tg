@@ -2,8 +2,7 @@ package org.prod.tgbotsvetlyachok.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.prod.tgbotsvetlyachok.bot.TelegramBot;
-import org.prod.tgbotsvetlyachok.model.PaymentDTO;
+import org.prod.tgbotsvetlyachok.dto.PaymentDTO;
 import org.prod.tgbotsvetlyachok.model.TelegramUser;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -64,7 +63,7 @@ public class UpdateService {
     public String getUrl(Update update, Double value){
        PaymentDTO payDTO = PaymentDTO.builder()
                .telegramUserId(userGetId(update))
-               .email("мимопока")
+               .mail("мимопока")
                .receipt(false)
                .value(value)
                .build();

@@ -1,6 +1,6 @@
 package org.prod.tgbotsvetlyachok.service;
 
-import org.prod.tgbotsvetlyachok.model.PaymentDTO;
+import org.prod.tgbotsvetlyachok.dto.PaymentDTO;
 import org.prod.tgbotsvetlyachok.model.TelegramUser;
 import org.telegram.telegrambots.meta.api.objects.Update;
 

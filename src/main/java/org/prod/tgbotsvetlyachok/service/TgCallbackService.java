@@ -14,7 +14,7 @@ public class TgCallbackService {
         String callback = update.getCallbackQuery().getData();
         switch (callback){
             case "MONTHS":
-                messageService.paymentUrl(update, 200.00);
+                messageService.paymentUrl(update, 200.00); //todo это пока около заглушка
                 break;
             default:
                 messageService.paymentUrl(update, 200.00);
