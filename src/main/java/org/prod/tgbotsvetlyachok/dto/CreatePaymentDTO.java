@@ -5,18 +5,15 @@ import lombok.Data;
 
 @Data
 @Builder
-public class PaymentDTO {
+public class CreatePaymentDTO {
 
-    private Long telegramUserId;
+    private Long id;
 
-    private String username;
-
-    private String mail;
-
-    private Double value;
+    private  String mail;
 
     private Boolean receipt;
 
-    private String order_id;
+    private Double value;
 
+    private String order_id;
 }
