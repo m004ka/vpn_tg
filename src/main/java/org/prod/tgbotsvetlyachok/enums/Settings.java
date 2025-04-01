@@ -1,4 +1,4 @@
-package org.prod.tgbotsvetlyachok.bot;
+package org.prod.tgbotsvetlyachok.enums;
 
 import lombok.Getter;
 

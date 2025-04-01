@@ -2,7 +2,7 @@ package org.prod.tgbotsvetlyachok.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.prod.tgbotsvetlyachok.bot.Period;
+import org.prod.tgbotsvetlyachok.enums.Period;
 @Data
 @AllArgsConstructor
 public class TelegramPaymentDTO {

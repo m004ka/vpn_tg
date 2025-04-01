@@ -2,7 +2,6 @@ package org.prod.tgbotsvetlyachok.service.logic;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.prod.tgbotsvetlyachok.bot.Period;
 import org.prod.tgbotsvetlyachok.dto.TelegramUserDTO;
 import org.prod.tgbotsvetlyachok.redis.Prefix;
 import org.prod.tgbotsvetlyachok.redis.RedisService;

@@ -2,7 +2,7 @@ package org.prod.tgbotsvetlyachok.service.front.messages;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.prod.tgbotsvetlyachok.bot.Period;
+import org.prod.tgbotsvetlyachok.enums.Period;
 import org.prod.tgbotsvetlyachok.bot.TelegramBot;
 import org.prod.tgbotsvetlyachok.dto.PaymentDTO;
 import org.prod.tgbotsvetlyachok.redis.Prefix;
